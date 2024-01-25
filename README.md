@@ -1,6 +1,6 @@
 # Developments tools compatibility with Etherlink
 
-This repo contains 4 differents tools used for developments and interactions of dApp:
+This repo contains 4 different tools used for developments and interactions of dApp:
 - Foundry
 - Hardhat
 - Remix
