@@ -73,3 +73,10 @@ If you want to use the setNumber, you can run the following command and choose t
 ```bash
 cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "setNumber(uint256)" <your_value> --legacy
 ```
+
+#### Simulate revert
+
+If you want to see the Counter in a revert behavior, you can run the command:
+```bash
+cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "revertMe(uint256,uint256)" 2 0 --legacy
+```
