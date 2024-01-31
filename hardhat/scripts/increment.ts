@@ -4,6 +4,9 @@ const counterAddress = ""; // address of the counter
 
 async function main() {
   const [ signer ] = await ethers.getSigners();
+  if (counterAddress.length == 0) {
+    console.log("Error: you forgot to set your contract address in the script file.");
+  }
   const counter = await ethers.getContractAt("Counter", counterAddress, signer);
 
   console.log("Counter before the call:", await counter.number());

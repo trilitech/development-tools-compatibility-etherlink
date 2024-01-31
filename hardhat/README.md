@@ -59,3 +59,8 @@ You can also set the number. Go in the `scripts/setNumber.ts` file and change th
 ```bash
 npx hardhat run scripts/setNumber.ts --network <etherlink or nightly>
 ```
+
+Finally, you can test the revert behavior by running:
+```bash
+npx hardhat run scripts/reverMe.ts --network <etherlink or nightly>
+```
