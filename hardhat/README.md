@@ -33,34 +33,41 @@ npx hardhat compile
 npx hardhat test
 ```
 
-## Deploy the contract and run some tests on Etherlink
+## Deploy the contract
 
-### 1. Deploy and verify
+### 1. Deploy
 You can deploy the contract directly on chain. Choose between `etherlink` and `nightly` then run:
 ```bash
 npx hardhat run scripts/deploy.ts --network <etherlink or nightly>
 ```
 
+### 2. Verify
 Then, you can verify the contract you just deployed with the command:
 ```bash
 npx hardhat verify <contract-address> --network <etherlink or nightly>
 ```
 
-### 2. Send transactions
+## Send transactions
 
-To send transactions to the chain and test the counter you deployed, keep the address printed during the deployment above.
+To send transactions to the chain and test the counter you deployed, keep the address printed during the deployment above. You will need to add the address of your contract in each script you use.
+
+### 3. Increment the counter
 
 If you want to increment the counter, go in the `scripts/increment.ts` file and change the `counterAddress` variable line 3 with the address of your contract. Then run:
 ```bash
 npx hardhat run scripts/increment.ts --network <etherlink or nightly>
 ```
 
+### 4. Set the value in the counter
+
 You can also set the number. Go in the `scripts/setNumber.ts` file and change the `counterAddress` variable line 3 with the address of your contract and the `numberToSet` line 4 with the number you want the counter to be set with. Then run:
 ```bash
 npx hardhat run scripts/setNumber.ts --network <etherlink or nightly>
 ```
 
+### 5. Test the revert
+
 Finally, you can test the revert behavior by running:
 ```bash
-npx hardhat run scripts/reverMe.ts --network <etherlink or nightly>
+npx hardhat run scripts/revertMe.ts --network <etherlink or nightly>
 ```
