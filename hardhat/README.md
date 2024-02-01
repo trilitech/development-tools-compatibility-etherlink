@@ -71,3 +71,11 @@ Finally, you can test the revert behavior by running:
 ```bash
 npx hardhat run scripts/revertMe.ts --network <etherlink or nightly>
 ```
+
+### 6. Test the revert
+
+If you want to try a deployment of the counter with a proxy pattern (transparent in our case) by Openzeppelin:
+```bash
+npx hardhat run scripts/deployWithProxy.ts --network <etherlink or nightly>
+```
+
