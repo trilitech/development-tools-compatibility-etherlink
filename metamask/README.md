@@ -2,16 +2,14 @@
 
 This is a basic step-by-step tutorial to test the compatibility between MetaMask and Etherlink network. Follow the steps bellow to install and test it.
 
-## Setup MetaMask
+## 1. Setup MetaMask
 
 If you want to use MetaMask with Etherlink, the first thing you need is the MetaMask wallet. You can install it by following the [official guide](https://support.metamask.io/hc/en-us/articles/360015489531-Getting-started-with-MetaMask).
 
 Then you need to add the networks to your wallet. For Etherlink, you can follow the [documentation](https://docs.etherlink.com/get-started/connect-your-wallet-to-etherlink
 ). For the Ninghtly version, you can go [here](https://etherlink-nightly.tzalpha.net/) and either click on `Connect` or add the network manually.
 
-## Tests
-
-### Send tokens
+## 2. Tests simple transactions
 
 The first test you can do is to send yourself some funds:
 1. Open your MetaMask
@@ -20,7 +18,7 @@ The first test you can do is to send yourself some funds:
 4. You can either copy/paste your address or select it under `Your accounts`
 5. Choose an amount and click on `Next` then `Confirm`
 
-### Simple transaction
+## 3. Interacting with dApp
 
 You can try to interact with a dApp connected to Etherlink that use MetaMask. If you don't know any, I recommend you to use the [official explorer](https://testnet-explorer.etherlink.com/) for Etherlink.
 
@@ -32,3 +30,11 @@ Once you are on the explorer, you can connect your MetaMask to the app so you ca
 1. Click on the `Connect wallet` button
 2. Click on the `increment` drop down
 3. Click on the `write` button and accept the transaction
+
+## 4. Metamask handle failed transactions
+
+Here, the goal is to test that Metamask handle correctly a transaction that will fail.
+
+In order to have a failed transaction in Metamask, you can call the method `setIsMeReverting()` from the contract `RevertTransaction.sol` deployed on the explorer. If you don't want to deploy one, [here](https://testnet-explorer.etherlink.com/address/0xD8ac6B38fC96493053Bb61C5426994fE186e1e52?tab=write_contract) is one!
+
+You need to do the same steps as for the point 3. above on this contract. The transaction will failed, then you can send to youtself some tokens to be sure that the transaction and Metamask are ok after a transaction is failed.
