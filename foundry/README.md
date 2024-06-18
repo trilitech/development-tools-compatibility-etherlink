@@ -24,10 +24,8 @@ forge test
 #### 1. Deploy
 You can deploy the contract directly on chain. Choose between `etherlink` and `nightly` by changing the RPC URL:
 ```bash
-forge create --rpc-url <your_rpc_url> --private-key <your_private_key> src/Counter.sol:Counter --legacy
+forge create --rpc-url <your_rpc_url> --private-key <your_private_key> src/Counter.sol:Counter
 ```
-
-**Important:** as Etherlink doesn't support EIP-1559 for the moment, we have to add the `--legacy` at the end of the commands.
 
 #### 2. Verify
 Then, you can verify the contract you just deployed with the command:
@@ -67,19 +65,19 @@ cast call --rpc-url <rpc_url> <contract_address> "number()(uint256)"
 
 You can use cast to test your counter. If you want to use the increment, you can run:
 ```bash
-cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "increment()" --legacy
+cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "increment()"
 ```
 
 #### 5. Set the number
 
 If you want to use the setNumber, you can run the following command and choose the value:
 ```bash
-cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "setNumber(uint256)" <your_value> --legacy
+cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "setNumber(uint256)" <your_value>
 ```
 
 #### 6. Simulate revert
 
 If you want to see the Counter in a revert behavior, you can run the command:
 ```bash
-cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "revertMe(uint256,uint256)" 2 0 --legacy
+cast send --account <name_of_your_wallet> --rpc-url <rpc_url> <contract_address> "revertMe(uint256,uint256)" 2 0
 ```
