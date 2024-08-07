@@ -33,7 +33,7 @@ Then, you can verify the contract you just deployed with the command:
 forge verify-contract --etherscan-api-key YOUCANCOPYME0000000000000000000000 --verifier-url <explorer_api_url> <contract_address> src/Counter.sol:Counter --watch
 ```
 
-For the explorer api url, you need to take the eplorer url and add `/api` at the end (as Etherlink use Blockscout and this is how it works). For exemple, the Etherlink testnet is on the url `https://testnet-explorer.etherlink.com` so it means that the api url is `https://testnet-explorer.etherlink.com/api`.
+For the explorer api url, you need to take the eplorer url and add `/api` at the end (as Etherlink use Blockscout and this is how it works). For exemple, the Etherlink testnet is on the url `https://testnet.explorer.etherlink.com` so it means that the api url is `https://testnet.explorer.etherlink.com/api`.
 
 ### Send transactions using Cast
 
